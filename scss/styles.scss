@@ -1,0 +1,538 @@
+$primary: #f0E68C;
+$secondary: #adb5bd;
+$light: #f7f2d0;
+$dark: rgb(24, 24, 24);
+$darkcolorbg: #f0df4d;
+$body-bg: #eeeeee;
+$widthmax: 100%;
+$medpix: 150px;
+$card-border-color: $primary;
+
+$theme-colors: (
+  "primary":    $primary,
+  "light":      $light,
+  "dark":       $dark,
+  "secondary":  $secondary,
+);
+
+/*
+font-family: 'Josefin Slab', serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+i{
+    font-size: 2rem;
+    margin: 0.2rem;
+}
+.encabezado{
+	background-color: $primary;
+	width: $widthmax;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	.encabezado__enlace {
+		.encabezado__imagen {
+			width: 175px;
+			height: $medpix/2;
+			margin: 2px;
+			transition: transform 2s;
+			&:hover {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+.menu {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	>.menu__separador {
+		.subMenu{
+			display: none;
+		}
+		&:hover {
+			.subMenu{
+				display: flex;
+				flex-direction: column;
+				align-items: stretch;
+				justify-content: left;
+				background-color: $light;
+				position: absolute;
+				margin-left: -10px;
+				z-index: 100;
+				padding: 0;
+			}
+		}
+	}
+}
+.menu__separador{
+	padding: 0.4rem;
+	margin: 0.2rem;
+	color: gray;
+	background-color: $primary;
+	.menu__enlace{
+		text-decoration: none;
+		color: rgb(104, 86, 86);
+		font-weight: lighter;
+		font-size: 1.3rem;
+		&:hover{
+			color: $dark;
+		}
+	}
+	i{
+		font-size: 1rem;
+	}
+}
+.subMenu__separador{
+		padding: 0.4rem;
+		margin: 0.2rem;
+		border-bottom: solid 1px $dark;
+	.subMenu__enlace{
+		text-decoration: none;
+		color: gray;
+		font-size: 1.1rem;
+		&:hover{
+			color: $dark;
+		}
+	}
+}
+#paginaPrincipal {
+	width: 98%;
+	height: 98%;
+	margin: 10px;
+	>article {
+		width: 60%;
+		height: min-content;
+		margin: 10px;
+	}
+}
+.inicioCarrusel{
+	border: solid 1.5px $darkcolorbg;
+	background-color: #fff;
+	height: 95%;
+	margin: 1rem;
+	padding: .5rem;
+	font-family: 'Open Sans', sans-serif;
+	.inicioCarrusel__carrusel{
+		.inicioCarrusel__imagen{
+			width: $widthmax;
+			height: 30rem;
+		}
+	}
+	.inicioCarrusel__textos{
+		.inicioCarrusel__titulo{
+			text-align: center;
+			font-size: 3rem;
+			font-family: 'Josefin Slab', serif;
+			text-decoration: underline;
+			color: gray;
+			&:hover{
+				color: $dark;
+			}
+		}
+	}
+}
+.menuVariado {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	justify-content: space-around;
+	padding: 5px;
+	.menuVariado__articulo{
+		.menuVariado__imagen{
+			width: $medpix/2;
+			height: $medpix;
+			margin: 2.5px;
+			transition: transform 1s;
+			&:active {
+				transform: scale(2,2);
+			}
+		}
+		background-color: white;
+		border: solid 1.5px $darkcolorbg;
+		border-radius: 10px;
+		text-align: center;
+		padding: 3px;
+		.menuVariado__titulo {
+			font-family: 'Josefin Slab', serif;
+			color: gray;
+			text-align: center;
+			&:hover{
+				color: $dark;
+			}
+		}
+		.menuVariado__texto{
+			font-family: 'Open Sans', sans-serif;
+			text-align: center;
+			font-weight: bold;
+			color: $dark;
+		}
+	}
+}
+#vinos{
+	height: auto;
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+}
+.vinosCarrusel{
+	border: solid 1.5px $darkcolorbg;
+	background-color: #fff;
+	height: 95%;
+	margin: .5rem;
+	padding: .5rem;
+	font-family: 'Open Sans', sans-serif;
+	.vinosCarrusel__carrusel{
+		.vinosCarrusel__imagen{
+			width: $widthmax;
+			height: 30rem;
+		}
+	}
+	.vinosCarrusel__textos{
+		.vinosCarrusel__titulo{
+			text-align: center;
+			font-size: 3rem;
+			font-family: 'Josefin Slab', serif;
+			text-decoration: underline;
+			color: gray;
+			&:hover{
+				color: $dark;
+			}
+		}
+	}
+}
+.vinos__cards{
+	display: flex;
+	flex-direction: row;
+	.card{
+		text-align: center;
+		margin: .5rem;
+	}
+}
+#whisky{
+	height: auto;
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+}
+.whiskyCarrusel{
+	border: solid 1.5px $darkcolorbg;
+	background-color: #fff;
+	height: 95%;
+	margin: .5rem;
+	padding: .5rem;
+	font-family: 'Open Sans', sans-serif;
+	.whiskyCarrusel__carrusel{
+		.whiskyCarrusel__imagen{
+			width: $widthmax;
+			height: 30rem;
+		}
+	}
+	.whiskyCarrusel__textos{
+		.whiskyCarrusel__titulo{
+			text-align: center;
+			font-size: 3rem;
+			font-family: 'Josefin Slab', serif;
+			text-decoration: underline;
+			color: gray;
+			&:hover{
+				color: $dark;
+			}
+		}
+	}
+}
+.whisky__cards{
+	display: flex;
+	flex-direction: row;
+	.card{
+		text-align: center;
+		margin: .5rem;
+	}
+}
+#aperitivos{
+	height: auto;
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+}
+.aperitivoCarrusel{
+	border: solid 1.5px $darkcolorbg;
+	background-color: #fff;
+	height: 95%;
+	margin: .5rem;
+	padding: .5rem;
+	font-family: 'Open Sans', sans-serif;
+	.aperitivoCarrusel__carrusel{
+		.aperitivoCarrusel__imagen{
+			width: $widthmax;
+			height: 30rem;
+		}
+	}
+	.aperitivoCarrusel__textos{
+		.aperitivoCarrusel__titulo{
+			text-align: center;
+			font-size: 3rem;
+			font-family: 'Josefin Slab', serif;
+			text-decoration: underline;
+			color: gray;
+			&:hover{
+				color: $dark;
+			}
+		}
+	}
+}
+.aperitivo__cards{
+	display: flex;
+	flex-direction: row;
+	.card{
+		text-align: center;
+		margin: .5rem;
+	}
+}
+#promos{
+	height: auto;
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+}
+.promosCarrusel{
+	border: solid 1.5px $darkcolorbg;
+	background-color: #fff;
+	height: 95%;
+	margin: .5rem;
+	padding: .5rem;
+	font-family: 'Open Sans', sans-serif;
+	.promosCarrusel__carrusel{
+		.promosCarrusel__imagen{
+			width: $widthmax;
+			height: 30rem;
+		}
+	}
+	.promosCarrusel__textos{
+		.promosCarrusel__titulo{
+			text-align: center;
+			font-size: 3rem;
+			font-family: 'Josefin Slab', serif;
+			text-decoration: underline;
+			color: gray;
+			&:hover{
+				color: $dark;
+			}
+		}
+	}
+}
+.promos__cards{
+	display: flex;
+	flex-direction: row;
+	.card{
+		text-align: center;
+		margin: .5rem;
+	}
+}
+.zocalo{
+    font-family: 'Open Sans', sans-serif;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    animation: changeColor infinite ease-in 6s 0s;
+	.zocalo__titulo{
+		text-decoration: underline;
+		color: $dark;
+	}
+	.zocalo__texto--negrita{
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}
+
+@keyframes changeColor{
+    0%{
+        background-color: $primary;
+    }
+    50%{
+        background-color: $darkcolorbg;
+    }
+    100%{
+        background-color: $primary;
+    }
+}
+form{
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: small;
+}
+.mayorDeEdad{
+    color: red;
+}
+.zocalo__redesSociales{
+	.zocalo__iconos{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-evenly;
+	}
+}
+.error-404{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,239,158,1) 98%);
+	font-family: 'Josefin Slab', serif;
+	height: 100vh;
+}
+.error-message{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+	width: $widthmax;
+	.error-message__container{
+		text-align: center;
+		color:	gray;
+		h1{
+			font-size: 6rem;
+		}
+		p{
+			font-size: 1.5rem;
+		}
+	}
+}
+.footer-404{
+	display: flex;
+	align-items: center;
+	width: $widthmax;
+	a{
+		color: gray;
+		font-size: 1rem;
+		padding-left: 2rem;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+			color: #000;
+		}
+	}
+}
+@media only screen and (max-width: 600px)
+{
+    header.encabezado{
+        justify-content: center;
+    }
+    .encabezado>nav>.menu>.menu__separador>.menu__enlace{
+        font-size: .75rem;
+        margin-left: 1px;
+    }
+	.subMenu>.subMenu__separador>.subMenu__enlace{
+		font-size: .75rem;
+	}
+    .encabezado>a>img{
+        display: none;
+    }
+	.menuVariado{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+	.vinos__cards{
+		display: grid;
+		flex-direction: column;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+	.whisky__cards{
+		display: grid;
+		flex-direction: column;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+	.aperitivo__cards{
+		display: grid;
+		flex-direction: column;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+	.promos__cards{
+		display: grid;
+		flex-direction: column;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+	.carousel-inner{
+		display: none;
+	}
+    footer>form{
+        display: none;
+    }
+    .zocalo>.zocalo__titulo{
+        font-size: large;
+    }
+    .zocalo>.zocalo__nosotros>p{
+        font-size: small;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px)
+{
+	.encabezado>nav>.menu>.menu__separador>.menu__enlace{
+        font-size: 1rem;
+        margin-left: 1px;
+    }
+	#paginaPrincipal{
+		width: 80%;
+	}
+    #paginaPrincipal>.menuVariado{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 1fr;
+		width: $widthmax;
+    }
+	.vinos__cards{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	.whisky__cards{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	.aperitivo__cards{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	.promos__cards{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	} 
+	.zocalo>.zocalo__titulo{
+		font-size: 1.5rem;
+	}
+	.zocalo>.zocalo__nosotros>p{
+		font-size: .75rem;
+	}
+}
+@media only screen and (min-width: 1200px)
+{
+	.menuVariado{
+		grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@import "../bootstrap/scss/bootstrap.scss"
