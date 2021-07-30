@@ -653,9 +653,9 @@ form {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
   }
-  #carouselExampleControls{
-		display: none;
-	}
+  .carrusel {
+    display: none;
+  }
   footer > form {
     display: none;
   }
