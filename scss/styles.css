@@ -130,97 +130,109 @@ i {
 }
 
 #paginaPrincipal {
-  width: 98%;
-  height: 98%;
-  margin: 10px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#paginaPrincipal > article {
-  width: 60%;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 10px;
-}
-
-.inicioCarrusel {
+.paginaPrincipalCarrusel {
   border: solid 1.5px #f0df4d;
   background-color: #fff;
   height: 95%;
-  margin: 1rem;
+  margin: .5rem;
   padding: .5rem;
   font-family: 'Open Sans', sans-serif;
 }
 
-.inicioCarrusel .inicioCarrusel__carrusel .inicioCarrusel__imagen {
+.paginaPrincipalCarrusel .paginaPrincipal__carrusel .paginaPrincipal__imagen {
   width: 100%;
   height: 30rem;
 }
 
-.inicioCarrusel .inicioCarrusel__textos .inicioCarrusel__titulo {
+.paginaPrincipalCarrusel .paginaPrincipal__textos .paginaPrincipal__titulo {
   text-align: center;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Josefin Slab', serif;
   text-decoration: underline;
   color: gray;
 }
 
-.inicioCarrusel .inicioCarrusel__textos .inicioCarrusel__titulo:hover {
+.paginaPrincipalCarrusel .paginaPrincipal__textos .paginaPrincipal__titulo:hover {
   color: #181818;
 }
 
-.menuVariado {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 5px;
-}
-
-.menuVariado .menuVariado__articulo {
-  background-color: white;
-  border: solid 1.5px #f0df4d;
-  border-radius: 10px;
+.whiskysPrincipal {
+  margin: 2rem;
   text-align: center;
-  padding: 3px;
-}
-
-.menuVariado .menuVariado__articulo .menuVariado__imagen {
-  width: 75px;
-  height: 150px;
-  margin: 2.5px;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-}
-
-.menuVariado .menuVariado__articulo .menuVariado__imagen:active {
-  -webkit-transform: scale(2, 2);
-          transform: scale(2, 2);
-}
-
-.menuVariado .menuVariado__articulo .menuVariado__titulo {
   font-family: 'Josefin Slab', serif;
+  text-decoration: underline;
   color: gray;
+}
+
+.whiskysPrincipal:hover {
+  color: #000;
+}
+
+.whiskysPrincipal h2, .whiskysPrincipal .h2 {
+  font-size: 3.5rem;
+}
+
+.vinosPrincipal {
+  margin: 2rem;
   text-align: center;
+  font-size: 3.5rem;
+  font-family: 'Josefin Slab', serif;
+  text-decoration: underline;
+  color: gray;
 }
 
-.menuVariado .menuVariado__articulo .menuVariado__titulo:hover {
-  color: #181818;
+.vinosPrincipal:hover {
+  color: #000;
 }
 
-.menuVariado .menuVariado__articulo .menuVariado__texto {
+.vinosPrincipal h2, .vinosPrincipal .h2 {
+  font-size: 3.5rem;
+}
+
+.paginaPrincipal__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-family: 'Open Sans', sans-serif;
+}
+
+.paginaPrincipal__cards .card {
   text-align: center;
-  font-weight: bold;
-  color: #181818;
+  margin: .5rem 0rem .5rem .5rem;
+  border-top: solid 1px #f0E68C;
+  border-bottom: solid 1px #f0E68C;
+  border-left: solid 1px #f0E68C;
+  border-right: 0;
+  border-radius: 0;
+}
+
+.paginaPrincipal__cards .paginaPrincipal__cards--texto {
+  margin: .5rem 0;
+  border-top: solid 1px #f0E68C;
+  border-bottom: solid 1px #f0E68C;
+  border-right: solid 1px #f0E68C;
+  border-left: 0;
+  font-style: italic;
+  border-radius: 0;
+}
+
+.whiskysPrincipal__textos {
+  margin-left: 0;
 }
 
 #vinos {
@@ -251,7 +263,7 @@ i {
 
 .vinosCarrusel .vinosCarrusel__textos .vinosCarrusel__titulo {
   text-align: center;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Josefin Slab', serif;
   text-decoration: underline;
   color: gray;
@@ -304,7 +316,7 @@ i {
 
 .whiskyCarrusel .whiskyCarrusel__textos .whiskyCarrusel__titulo {
   text-align: center;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Josefin Slab', serif;
   text-decoration: underline;
   color: gray;
@@ -357,7 +369,7 @@ i {
 
 .aperitivoCarrusel .aperitivoCarrusel__textos .aperitivoCarrusel__titulo {
   text-align: center;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Josefin Slab', serif;
   text-decoration: underline;
   color: gray;
@@ -410,7 +422,7 @@ i {
 
 .promosCarrusel .promosCarrusel__textos .promosCarrusel__titulo {
   text-align: center;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Josefin Slab', serif;
   text-decoration: underline;
   color: gray;
@@ -599,11 +611,32 @@ form {
   .encabezado > a > img {
     display: none;
   }
-  .menuVariado {
+  .paginaPrincipal__cards {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    margin-left: 5rem;
+  }
+  .paginaPrincipal__cards .card {
+    margin: .5rem .5rem 0 .5rem;
+    border-top: solid 1px #f0E68C;
+    border-bottom: 0;
+    border-right: solid 1px #f0E68C;
+    border-left: solid 1px #f0E68C;
+  }
+  .paginaPrincipal__cards .paginaPrincipal__cards--texto {
+    margin: 0 .5rem .5rem .5rem;
+    border-left: solid 1px #f0E68C;
+    border-bottom: solid 1px #f0E68C;
+    border-right: solid 1px #f0E68C;
+    border-top: 0;
   }
   .vinos__cards {
     display: -ms-grid;
@@ -616,6 +649,7 @@ form {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    margin-left: 3rem;
   }
   .whisky__cards {
     display: -ms-grid;
@@ -628,6 +662,7 @@ form {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    margin-left: 3rem;
   }
   .aperitivo__cards {
     display: -ms-grid;
@@ -640,6 +675,7 @@ form {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    margin-left: 3rem;
   }
   .promos__cards {
     display: -ms-grid;
@@ -652,8 +688,12 @@ form {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
+    margin-left: 3rem;
   }
-  .carrusel {
+  .promosCarrusel .promosCarrusel__textos .promosCarrusel__titulo {
+    font-size: 3.5rem;
+  }
+  #carouselExampleControls {
     display: none;
   }
   footer > form {
@@ -672,15 +712,18 @@ form {
     font-size: 1rem;
     margin-left: 1px;
   }
-  #paginaPrincipal {
-    width: 80%;
-  }
-  #paginaPrincipal > .menuVariado {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+  .paginaPrincipal__cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 275px 100px;
+        grid-template-columns: 275px 100px;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-    width: 100%;
+    margin-left: 12rem;
+  }
+  .paginaPrincipal__cards .paginaPrincipal__cards--texto {
+    padding-top: 5rem;
+    font-size: 1.3rem;
   }
   .vinos__cards {
     display: -ms-grid;
@@ -689,6 +732,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 5rem;
   }
   .whisky__cards {
     display: -ms-grid;
@@ -697,6 +741,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 5rem;
   }
   .aperitivo__cards {
     display: -ms-grid;
@@ -705,6 +750,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 5rem;
   }
   .promos__cards {
     display: -ms-grid;
@@ -713,6 +759,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 5rem;
   }
   .zocalo > .zocalo__titulo {
     font-size: 1.5rem;

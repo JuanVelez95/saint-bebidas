@@ -109,33 +109,29 @@ i{
 		}
 	}
 }
-#paginaPrincipal {
-	width: 98%;
-	height: 98%;
-	margin: 10px;
-	>article {
-		width: 60%;
-		height: min-content;
-		margin: 10px;
-	}
+#paginaPrincipal{
+	height: auto;
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
 }
-.inicioCarrusel{
+.paginaPrincipalCarrusel{
 	border: solid 1.5px $darkcolorbg;
 	background-color: #fff;
 	height: 95%;
-	margin: 1rem;
+	margin: .5rem;
 	padding: .5rem;
 	font-family: 'Open Sans', sans-serif;
-	.inicioCarrusel__carrusel{
-		.inicioCarrusel__imagen{
+	.paginaPrincipal__carrusel{
+		.paginaPrincipal__imagen{
 			width: $widthmax;
 			height: 30rem;
 		}
 	}
-	.inicioCarrusel__textos{
-		.inicioCarrusel__titulo{
+	.paginaPrincipal__textos{
+		.paginaPrincipal__titulo{
 			text-align: center;
-			font-size: 3rem;
+			font-size: 5rem;
 			font-family: 'Josefin Slab', serif;
 			text-decoration: underline;
 			color: gray;
@@ -145,44 +141,58 @@ i{
 		}
 	}
 }
-.menuVariado {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	justify-content: space-around;
-	padding: 5px;
-	.menuVariado__articulo{
-		.menuVariado__imagen{
-			width: $medpix/2;
-			height: $medpix;
-			margin: 2.5px;
-			transition: transform 1s;
-			&:active {
-				transform: scale(2,2);
-			}
-		}
-		background-color: white;
-		border: solid 1.5px $darkcolorbg;
-		border-radius: 10px;
-		text-align: center;
-		padding: 3px;
-		.menuVariado__titulo {
-			font-family: 'Josefin Slab', serif;
-			color: gray;
-			text-align: center;
-			&:hover{
-				color: $dark;
-			}
-		}
-		.menuVariado__texto{
-			font-family: 'Open Sans', sans-serif;
-			text-align: center;
-			font-weight: bold;
-			color: $dark;
-		}
+.whiskysPrincipal{
+	margin: 2rem;
+	text-align: center;
+	font-family: 'Josefin Slab', serif;
+	text-decoration: underline;
+	color: gray;
+	&:hover{
+		color: #000;
 	}
+	h2{
+		font-size: 3.5rem;
+	}
+}
+.vinosPrincipal{
+	margin: 2rem;
+	text-align: center;
+	font-size: 3.5rem;
+	font-family: 'Josefin Slab', serif;
+	text-decoration: underline;
+	color: gray;
+	&:hover{
+		color: #000;
+	}
+	h2{
+		font-size: 3.5rem;
+	}
+}
+.paginaPrincipal__cards{
+	display: flex;
+	flex-direction: row;
+	font-family: 'Open Sans', sans-serif;
+	.card{
+		text-align: center;
+		margin: .5rem 0rem .5rem .5rem;
+		border-top: solid 1px $primary;
+		border-bottom: solid 1px $primary;
+		border-left: solid 1px $primary;
+		border-right: 0;
+		border-radius: 0;
+	}
+	.paginaPrincipal__cards--texto{
+		margin: .5rem 0;
+		border-top: solid 1px $primary;
+		border-bottom: solid 1px $primary;
+		border-right: solid 1px $primary;
+		border-left: 0;
+		font-style: italic;
+		border-radius: 0;
+	}
+}
+.whiskysPrincipal__textos{
+	margin-left: 0;
 }
 #vinos{
 	height: auto;
@@ -206,7 +216,7 @@ i{
 	.vinosCarrusel__textos{
 		.vinosCarrusel__titulo{
 			text-align: center;
-			font-size: 3rem;
+			font-size: 5rem;
 			font-family: 'Josefin Slab', serif;
 			text-decoration: underline;
 			color: gray;
@@ -246,7 +256,7 @@ i{
 	.whiskyCarrusel__textos{
 		.whiskyCarrusel__titulo{
 			text-align: center;
-			font-size: 3rem;
+			font-size: 5rem;
 			font-family: 'Josefin Slab', serif;
 			text-decoration: underline;
 			color: gray;
@@ -286,7 +296,7 @@ i{
 	.aperitivoCarrusel__textos{
 		.aperitivoCarrusel__titulo{
 			text-align: center;
-			font-size: 3rem;
+			font-size: 5rem;
 			font-family: 'Josefin Slab', serif;
 			text-decoration: underline;
 			color: gray;
@@ -326,7 +336,7 @@ i{
 	.promosCarrusel__textos{
 		.promosCarrusel__titulo{
 			text-align: center;
-			font-size: 3rem;
+			font-size: 5rem;
 			font-family: 'Josefin Slab', serif;
 			text-decoration: underline;
 			color: gray;
@@ -445,35 +455,63 @@ form{
     .encabezado>a>img{
         display: none;
     }
-	.menuVariado{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
+	.paginaPrincipal__cards{
+		display: grid;
+		flex-direction: column;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		margin-left: 5rem;
+		.card{
+			margin: .5rem .5rem 0 .5rem;
+			border-top: solid 1px $primary;
+			border-bottom: 0;
+			border-right: solid 1px $primary;
+			border-left: solid 1px $primary;
+		}
+		.paginaPrincipal__cards--texto{
+			margin: 0 .5rem .5rem .5rem;
+			border-left: solid 1px $primary;
+			border-bottom: solid 1px $primary;
+			border-right: solid 1px $primary;
+			border-top: 0;
+		}
+	}
 	.vinos__cards{
 		display: grid;
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
+		margin-left: 3rem;
 	}
 	.whisky__cards{
 		display: grid;
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
+		margin-left: 3rem;
 	}
 	.aperitivo__cards{
 		display: grid;
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
+		margin-left: 3rem;
 	}
 	.promos__cards{
 		display: grid;
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
+		margin-left: 3rem;
 	}
-	.carrusel{
+	.promosCarrusel{
+		.promosCarrusel__textos{
+		  .promosCarrusel__titulo{
+			font-size: 3.5rem;
+		  }
+		}
+	  }
+	#carouselExampleControls{
 		display: none;
 	}
     footer>form{
@@ -492,33 +530,39 @@ form{
         font-size: 1rem;
         margin-left: 1px;
     }
-	#paginaPrincipal{
-		width: 80%;
+	.paginaPrincipal__cards{
+		display: grid;
+		grid-template-columns: 275px 100px;
+		grid-template-rows: 1fr 1fr;
+		margin-left: 12rem;
+		.paginaPrincipal__cards--texto{
+			padding-top: 5rem;
+			font-size: 1.3rem;
+		}
 	}
-    #paginaPrincipal>.menuVariado{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows:1fr 1fr;
-		width: $widthmax;
-    }
 	.vinos__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 5rem;
 	}
 	.whisky__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 5rem;
 	}
 	.aperitivo__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 5rem;
 	}
 	.promos__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 5rem;
 	} 
 	.zocalo>.zocalo__titulo{
 		font-size: 1.5rem;
