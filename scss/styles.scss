@@ -558,11 +558,18 @@ form{
         font-size: 1rem;
         margin-left: 1px;
     }
+	.encabezado{
+		.encabezado__enlace{
+			.encabezado__imagen{
+				width: $medpix;
+			}
+		}
+	}
 	.paginaPrincipal__cards{
 		display: grid;
 		grid-template-columns: 275px 100px;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 4rem;
+		margin-left: 1rem;
 		.paginaPrincipal__cards--texto{
 			padding-top: 5rem;
 			font-size: 1.3rem;
@@ -572,25 +579,21 @@ form{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 1rem;
 	}
 	.whisky__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 1rem;
 	}
 	.aperitivo__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 1rem;
 	}
 	.promos__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 1rem;
 	} 
 	.zocalo>.zocalo__titulo{
 		font-size: 1.5rem;
