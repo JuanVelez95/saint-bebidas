@@ -460,7 +460,7 @@ form{
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
-		margin-left: 5rem;
+		margin-left: 3rem;
 		.card{
 			margin: .5rem .5rem 0 .5rem;
 			border-top: solid 1px $primary;
@@ -481,28 +481,28 @@ form{
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
-		margin-left: 3rem;
+		margin-left: 1.5rem;
 	}
 	.whisky__cards{
 		display: grid;
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
-		margin-left: 3rem;
+		margin-left: 1.5rem;
 	}
 	.aperitivo__cards{
 		display: grid;
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
-		margin-left: 3rem;
+		margin-left: 1.5rem;
 	}
 	.promos__cards{
 		display: grid;
 		flex-direction: column;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
-		margin-left: 3rem;
+		margin-left: 1.5rem;
 	}
 	.promosCarrusel{
 		.promosCarrusel__textos{
@@ -511,6 +511,34 @@ form{
 		  }
 		}
 	  }
+	.aperitivoCarrusel{
+		.aperitivoCarrusel__textos{
+			.aperitivoCarrusel__titulo{
+				font-size: 3.5rem;
+			}
+		}
+	}
+	.paginaPrincipalCarrusel{
+		.paginaPrincipal__textos{
+			.paginaPrincipal__titulo{
+				font-size: 3.5rem;
+			}
+		}
+	}
+	.vinosCarrusel{
+		.vinosCarrusel__textos{
+			.vinosCarrusel__titulo{
+				font-size: 3.5rem;
+			}
+		}
+	}
+	.whiskyCarrusel{
+		.whiskyCarrusel__textos{
+			.whiskyCarrusel__titulo{
+				font-size: 3.5rem;
+			}
+		}
+	}
 	#carouselExampleControls{
 		display: none;
 	}
@@ -534,7 +562,7 @@ form{
 		display: grid;
 		grid-template-columns: 275px 100px;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 12rem;
+		margin-left: 4rem;
 		.paginaPrincipal__cards--texto{
 			padding-top: 5rem;
 			font-size: 1.3rem;
@@ -544,25 +572,25 @@ form{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 5rem;
+		margin-left: 1rem;
 	}
 	.whisky__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 5rem;
+		margin-left: 1rem;
 	}
 	.aperitivo__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 5rem;
+		margin-left: 1rem;
 	}
 	.promos__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		margin-left: 5rem;
+		margin-left: 1rem;
 	} 
 	.zocalo>.zocalo__titulo{
 		font-size: 1.5rem;
