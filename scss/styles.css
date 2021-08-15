@@ -167,6 +167,38 @@ i {
   color: #181818;
 }
 
+.paginaPrincipal__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.paginaPrincipal__cards .card {
+  text-align: center;
+  margin: .5rem 0rem .5rem .5rem;
+  border-top: solid 1px #f0E68C;
+  border-bottom: solid 1px #f0E68C;
+  border-left: solid 1px #f0E68C;
+  border-right: 0;
+  border-radius: 0;
+}
+
+.paginaPrincipal__cards .paginaPrincipal__cards--texto {
+  margin: .5rem 0;
+  border-top: solid 1px #f0E68C;
+  border-bottom: solid 1px #f0E68C;
+  border-right: solid 1px #f0E68C;
+  border-left: 0;
+  font-style: italic;
+  border-radius: 0;
+  padding-top: 1rem;
+}
+
 .whiskysPrincipal {
   margin: 2rem;
   text-align: center;
@@ -198,37 +230,6 @@ i {
 
 .vinosPrincipal h2, .vinosPrincipal .h2 {
   font-size: 3.5rem;
-}
-
-.paginaPrincipal__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.paginaPrincipal__cards .card {
-  text-align: center;
-  margin: .5rem 0rem .5rem .5rem;
-  border-top: solid 1px #f0E68C;
-  border-bottom: solid 1px #f0E68C;
-  border-left: solid 1px #f0E68C;
-  border-right: 0;
-  border-radius: 0;
-}
-
-.paginaPrincipal__cards .paginaPrincipal__cards--texto {
-  margin: .5rem 0;
-  border-top: solid 1px #f0E68C;
-  border-bottom: solid 1px #f0E68C;
-  border-right: solid 1px #f0E68C;
-  border-left: 0;
-  font-style: italic;
-  border-radius: 0;
 }
 
 .whiskysPrincipal__textos {
@@ -740,6 +741,9 @@ form {
   .encabezado .encabezado__enlace .encabezado__imagen {
     width: 150px;
   }
+  .paginaPrincipal__cards--texto {
+    padding-top: 1rem;
+  }
   .paginaPrincipal__cards {
     display: -ms-grid;
     display: grid;
@@ -760,6 +764,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 2rem;
   }
   .whisky__cards {
     display: -ms-grid;
@@ -768,6 +773,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 2rem;
   }
   .aperitivo__cards {
     display: -ms-grid;
@@ -776,6 +782,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 2rem;
   }
   .promos__cards {
     display: -ms-grid;
@@ -784,6 +791,7 @@ form {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-left: 2rem;
   }
   .zocalo .zocalo__titulo {
     font-size: 1.6rem;
@@ -796,7 +804,46 @@ form {
   }
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1240px) {
+  .paginaPrincipal__cards .card {
+    padding-top: 4rem;
+  }
+  .paginaPrincipal__cards .paginaPrincipal__cards--texto {
+    padding-top: 1rem;
+  }
+}
+
 @media only screen and (min-width: 2500px) {
+  .paginaPrincipalCarrusel {
+    height: 50rem;
+  }
+  .paginaPrincipalCarrusel .paginaPrincipal__carrusel .paginaPrincipal__imagen {
+    height: 42rem;
+  }
+  .vinosCarrusel {
+    height: 50rem;
+  }
+  .vinosCarrusel .vinosCarrusel__carrusel .vinosCarrusel__imagen {
+    height: 42rem;
+  }
+  .whiskyCarrusel {
+    height: 50rem;
+  }
+  .whiskyCarrusel .whiskyCarrusel__carrusel .whiskyCarrusel__imagen {
+    height: 42rem;
+  }
+  .aperitivoCarrusel {
+    height: 50rem;
+  }
+  .aperitivoCarrusel .aperitivoCarrusel__carrusel .aperitivoCarrusel__imagen {
+    height: 42rem;
+  }
+  .promosCarrusel {
+    height: 50rem;
+  }
+  .promosCarrusel .promosCarrusel__carrusel .promosCarrusel__imagen {
+    height: 42rem;
+  }
   .paginaPrincipal__cards {
     display: -ms-grid;
     display: grid;
@@ -810,6 +857,31 @@ form {
   .paginaPrincipal__cards .paginaPrincipal__cards--texto {
     padding-top: 5rem;
     font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 2500px) and (max-width: 1024px) {
+  .paginaPrincipal__cards .paginaPrincipal__cards {
+    padding-top: 4rem;
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .vinos__cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .whisky__cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .aperitivo__cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .promos__cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .zocalo .zocalo__titulo {
     font-size: 3rem;

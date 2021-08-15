@@ -141,6 +141,30 @@ i{
 		}
 	}
 }
+.paginaPrincipal__cards{
+	display: flex;
+	flex-direction: row;
+	font-family: 'Open Sans', sans-serif;
+	.card{
+		text-align: center;
+		margin: .5rem 0rem .5rem .5rem;
+		border-top: solid 1px $primary;
+		border-bottom: solid 1px $primary;
+		border-left: solid 1px $primary;
+		border-right: 0;
+		border-radius: 0;
+	}
+	.paginaPrincipal__cards--texto{
+		margin: .5rem 0;
+		border-top: solid 1px $primary;
+		border-bottom: solid 1px $primary;
+		border-right: solid 1px $primary;
+		border-left: 0;
+		font-style: italic;
+		border-radius: 0;
+		padding-top: 1rem;
+	}
+}
 .whiskysPrincipal{
 	margin: 2rem;
 	text-align: center;
@@ -166,29 +190,6 @@ i{
 	}
 	h2{
 		font-size: 3.5rem;
-	}
-}
-.paginaPrincipal__cards{
-	display: flex;
-	flex-direction: row;
-	font-family: 'Open Sans', sans-serif;
-	.card{
-		text-align: center;
-		margin: .5rem 0rem .5rem .5rem;
-		border-top: solid 1px $primary;
-		border-bottom: solid 1px $primary;
-		border-left: solid 1px $primary;
-		border-right: 0;
-		border-radius: 0;
-	}
-	.paginaPrincipal__cards--texto{
-		margin: .5rem 0;
-		border-top: solid 1px $primary;
-		border-bottom: solid 1px $primary;
-		border-right: solid 1px $primary;
-		border-left: 0;
-		font-style: italic;
-		border-radius: 0;
 	}
 }
 .whiskysPrincipal__textos{
@@ -573,7 +574,7 @@ form{
 @media only screen and (min-width: 601px) and (max-width: 768px)
 {
 	.encabezado>nav>.menu>.menu__separador>.menu__enlace{
-        font-size: 1rem;
+		font-size: 1rem;
         margin-left: 1px;
     }
 	.encabezado{
@@ -582,6 +583,9 @@ form{
 				width: $medpix;
 			}
 		}
+	}
+	.paginaPrincipal__cards--texto{
+		padding-top: 1rem;
 	}
 	.paginaPrincipal__cards{
 		display: grid;
@@ -597,21 +601,25 @@ form{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 2rem;
 	}
 	.whisky__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 2rem;
 	}
 	.aperitivo__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 2rem;
 	}
 	.promos__cards{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
+		margin-left: 2rem;
 	}
 	.zocalo{
 		.zocalo__titulo{
@@ -627,8 +635,49 @@ form{
 		}
 	}
 }
+@media only screen and (min-width: 1024px) and (max-width: 1240px)
+{
+	.paginaPrincipal__cards{
+		.card{
+			padding-top: 4rem;
+		}
+		.paginaPrincipal__cards--texto{
+			padding-top: 1rem;
+		}
+	}
+}
 @media only screen and (min-width: 2500px)
 {
+	.paginaPrincipalCarrusel{
+		height: 50rem;
+		.paginaPrincipal__carrusel .paginaPrincipal__imagen {
+			height: 42rem;
+		}
+	}
+	.vinosCarrusel{
+		height: 50rem;
+		.vinosCarrusel__carrusel .vinosCarrusel__imagen{
+			height: 42rem;
+		}
+	}
+	.whiskyCarrusel{
+		height: 50rem;
+		.whiskyCarrusel__carrusel .whiskyCarrusel__imagen{
+			height: 42rem;
+		}
+	}
+	.aperitivoCarrusel{
+		height: 50rem;
+		.aperitivoCarrusel__carrusel .aperitivoCarrusel__imagen{
+			height: 42rem;
+		}
+	}
+	.promosCarrusel{
+		height: 50rem;
+		.promosCarrusel__carrusel .promosCarrusel__imagen{
+			height: 42rem;
+		}
+	}
 	.paginaPrincipal__cards{
 		display: grid;
 		grid-template-columns: 275px 500px 275px 500px 275px 500px;
@@ -639,6 +688,23 @@ form{
 			padding-top: 5rem;
 			font-size: 1.3rem;
 		}
+		@media only screen and (max-width: 1024px){
+			.paginaPrincipal__cards{
+				padding-top: 4rem;
+			}
+		}
+	}
+	.vinos__cards{
+		justify-content: space-around;
+	}
+	.whisky__cards{
+		justify-content: space-around;
+	}
+	.aperitivo__cards{
+		justify-content: space-around;
+	}
+	.promos__cards{
+		justify-content: space-around;
 	}
 	.zocalo{
 		.zocalo__titulo{
