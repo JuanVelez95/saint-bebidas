@@ -597,19 +597,26 @@ form {
 
 @media only screen and (max-width: 600px) {
   header.encabezado {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .encabezado > a > img {
+    display: none;
   }
   .encabezado > nav > .menu > .menu__separador > .menu__enlace {
     font-size: .75rem;
     margin-left: 1px;
   }
+  .menu {
+    padding: 0.2rem 1rem;
+    margin: 0;
+  }
   .subMenu > .subMenu__separador > .subMenu__enlace {
     font-size: .75rem;
-  }
-  .encabezado > a > img {
-    display: none;
   }
   .paginaPrincipal__cards {
     display: -ms-grid;
@@ -622,7 +629,7 @@ form {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
-    margin-left: 3rem;
+    margin-left: 2.3rem;
   }
   .paginaPrincipal__cards .card {
     margin: .5rem .5rem 0 .5rem;
@@ -708,18 +715,24 @@ form {
   #carouselExampleControls {
     display: none;
   }
-  footer > form {
+  .zocalo {
+    padding: 0.5rem;
+  }
+  .zocalo form {
     display: none;
   }
-  .zocalo > .zocalo__titulo {
-    font-size: large;
+  .zocalo .zocalo__titulo {
+    font-size: 1.3rem;
   }
-  .zocalo > .zocalo__nosotros > p {
+  .zocalo .zocalo__nosotros p {
     font-size: small;
+  }
+  .zocalo .zocalo__redesSociales .zocalo__iconos i {
+    font-size: 1.5rem;
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media only screen and (min-width: 601px) and (max-width: 768px) {
   .encabezado > nav > .menu > .menu__separador > .menu__enlace {
     font-size: 1rem;
     margin-left: 1px;
@@ -734,7 +747,7 @@ form {
         grid-template-columns: 275px 100px;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-    margin-left: 1rem;
+    margin-left: 6.5rem;
   }
   .paginaPrincipal__cards .paginaPrincipal__cards--texto {
     padding-top: 5rem;
@@ -772,20 +785,46 @@ form {
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
   }
-  .zocalo > .zocalo__titulo {
-    font-size: 1.5rem;
+  .zocalo .zocalo__titulo {
+    font-size: 1.6rem;
   }
-  .zocalo > .zocalo__nosotros > p {
-    font-size: .75rem;
+  .zocalo .zocalo__nosotros > p {
+    font-size: .9rem;
+  }
+  .zocalo .zocalo__formulario label {
+    font-size: 0.9rem;
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .menuVariado {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+@media only screen and (min-width: 2500px) {
+  .paginaPrincipal__cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 275px 500px 275px 500px 275px 500px;
+        grid-template-columns: 275px 500px 275px 500px 275px 500px;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    margin-left: 10rem;
+    margin-bottom: 3rem;
+  }
+  .paginaPrincipal__cards .paginaPrincipal__cards--texto {
+    padding-top: 5rem;
+    font-size: 1.3rem;
+  }
+  .zocalo .zocalo__titulo {
+    font-size: 3rem;
+  }
+  .zocalo .zocalo__nosotros > p {
+    font-size: 1.8rem;
+  }
+  .zocalo .zocalo__formulario label {
+    font-size: 1.8rem;
+  }
+  .zocalo .zocalo__formulario input {
+    font-size: x-large;
+  }
+  .zocalo .zocalo__redesSociales .zocalo__iconos i {
+    font-size: 3rem;
   }
 }
 
